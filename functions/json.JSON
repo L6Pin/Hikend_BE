@@ -1,0 +1,32 @@
+{
+  "name": "Zeljin",
+  "photo_url": "URL",
+  "info": {
+    "height": 1850,
+    "peak": "Zeljin",
+    "coordinates": { "x": 20, "y": 30 },
+    "description": "Lorem ipsum"
+  },
+  "hikingClubs": [
+    { "name": "PK Uspn", "logo": "URL", "contact": "URL" },
+    { "name": "PSK Zeljin", "logo": "URL", "contact": "URL" }
+  ],
+  "routes": [
+    {
+      "number": 1,
+      "name": "routeName",
+      "difficulty": "hard af",
+      "length": "20 km",
+      "timeRequired": "1h 30min",
+      "gpx": "URL"
+    },
+    {
+      "number": 2,
+      "name": "routeName",
+      "difficulty": "easy af",
+      "length": "10 km",
+      "timeRequired": "30min",
+      "gpx": "URL"
+    }
+  ]
+}

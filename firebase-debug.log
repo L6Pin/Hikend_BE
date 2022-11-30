@@ -1,0 +1,695 @@
+[debug] [2022-11-30T15:19:53.478Z] ----------------------------------------------------------------------
+[debug] [2022-11-30T15:19:53.478Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2022-11-30T15:19:53.479Z] CLI Version:   11.16.1
+[debug] [2022-11-30T15:19:53.479Z] Platform:      darwin
+[debug] [2022-11-30T15:19:53.479Z] Node Version:  v16.14.0
+[debug] [2022-11-30T15:19:53.479Z] Time:          Wed Nov 30 2022 16:19:53 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-30T15:19:53.479Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-30T15:19:53.509Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-30T15:19:53.509Z] > authorizing via signed-in user (lukaperickv@gmail.com)
+[debug] [2022-11-30T15:19:53.509Z] [iam] checking project hikend-bb683 for permissions ["firebase.projects.get"]
+[debug] [2022-11-30T15:19:53.510Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hikend-bb683:testIamPermissions [none]
+[debug] [2022-11-30T15:19:53.510Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hikend-bb683:testIamPermissions x-goog-quota-user=projects/hikend-bb683
+[debug] [2022-11-30T15:19:53.510Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hikend-bb683:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-30T15:19:54.362Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hikend-bb683:testIamPermissions 200
+[debug] [2022-11-30T15:19:54.363Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hikend-bb683:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-30T15:19:54.364Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683 [none]
+[debug] [2022-11-30T15:19:54.623Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683 200
+[debug] [2022-11-30T15:19:54.623Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683 {"projectId":"hikend-bb683","projectNumber":"880590459660","displayName":"hikend","name":"projects/hikend-bb683","resources":{"hostingSite":"hikend-bb683"},"state":"ACTIVE","etag":"1_07067ef5-6911-4334-8bf5-df7153edcbd1"}
+[info] 
+[info] === Serving from '/Users/luka.peric/Desktop/Hikend_BE'...
+[info] 
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-11-30T15:19:54.636Z] defaultcredentials: writing to file /Users/luka.peric/.config/firebase/lukaperickv_gmail_com_application_default_credentials.json
+[debug] [2022-11-30T15:19:54.638Z] Setting GAC to /Users/luka.peric/.config/firebase/lukaperickv_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/luka.peric/.config/firebase/lukaperickv_gmail_com_application_default_credentials.json"}}
+[debug] [2022-11-30T15:19:54.639Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683/adminSdkConfig [none]
+[debug] [2022-11-30T15:19:54.868Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683/adminSdkConfig 200
+[debug] [2022-11-30T15:19:54.868Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hikend-bb683/adminSdkConfig {"projectId":"hikend-bb683","storageBucket":"hikend-bb683.appspot.com"}
+[info] i  functions: Watching "/Users/luka.peric/Desktop/Hikend_BE/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/luka.peric/Desktop/Hikend_BE/functions\" for Cloud Functions..."}}
+[debug] [2022-11-30T15:19:54.900Z] Validating nodejs source
+[debug] [2022-11-30T15:19:55.503Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:19:55.503Z] Building nodejs source
+[debug] [2022-11-30T15:19:55.503Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:19:55.505Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:19:56.027Z] Serving at port 9006
+
+[debug] [2022-11-30T15:19:56.166Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:19:56.170Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[info] ✔  functions[us-central1-app]: http function initialized (http://localhost:5000/hikend-bb683/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/hikend-bb683/us-central1/app)."}}
+[debug] [2022-11-30T15:20:29.411Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:20:29.412Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:20:29.413Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:20:29.414Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:20:29.415Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:20:29.428Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:20:29.428Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:20:30.001Z] [runtime-status] [19058] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.001Z] [runtime-status] [19058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.001Z] [runtime-status] [19058] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:20:30.001Z] [runtime-status] [19058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.091Z] [runtime-status] [19058] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:20:30.091Z] [runtime-status] [19058] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:20:30.091Z] [runtime-status] [19058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.091Z] [runtime-status] [19058] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.093Z] [runtime-status] [19058] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:20:30.093Z] [runtime-status] [19058] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:20:30.111Z] [runtime-status] [19058] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2022-11-30T15:20:30.152Z] [runtime-status] [19058] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:20:30.153Z] [runtime-status] [19058] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_49157bc043b4d4fd.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19058] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_49157bc043b4d4fd.sock"}}
+[debug] [2022-11-30T15:20:30.244Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:20:30.245Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:20:30.245Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:20:30.248Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:20:30.248Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.840042ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.840042ms"}}
+[debug] [2022-11-30T15:20:37.563Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:20:37.563Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:20:37.563Z] Accepted request GET /hikend-bb683/us-central1/app/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:20:37.564Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:20:37.564Z] [functions] Got req.url=/hikend-bb683/us-central1/app/app/api/create-mountain, mapping to path=/app/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/app/api/create-mountain, mapping to path=/app/api/create-mountain"}}
+[debug] [2022-11-30T15:20:37.564Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:20:37.565Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:20:37.582Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:20:37.583Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.763541ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.763541ms"}}
+[debug] [2022-11-30T15:21:19.074Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:21:19.074Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:21:19.074Z] Accepted request POST /hikend-bb683/us-central1/app/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:21:19.075Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:21:19.076Z] [functions] Got req.url=/hikend-bb683/us-central1/app/app/api/create-mountain, mapping to path=/app/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/app/api/create-mountain, mapping to path=/app/api/create-mountain"}}
+[debug] [2022-11-30T15:21:19.076Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:21:19.076Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:21:19.081Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:21:19.081Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.132042ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.132042ms"}}
+[debug] [2022-11-30T15:21:33.398Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:21:33.399Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:21:33.399Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:21:33.401Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:21:33.401Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:21:33.401Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:21:33.401Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:21:33.405Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:21:33.406Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.843666ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.843666ms"}}
+[debug] [2022-11-30T15:21:33.519Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2022-11-30T15:21:49.377Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:21:49.378Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:21:49.378Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:21:49.379Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:21:49.379Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:21:49.379Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:21:49.379Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:21:49.383Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: IDLE"}}
+[debug] [2022-11-30T15:21:49.383Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.587667ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.587667ms"}}
+[debug] [2022-11-30T15:22:11.736Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:22:12.738Z] Validating nodejs source
+[debug] [2022-11-30T15:22:13.358Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:22:13.358Z] Building nodejs source
+[debug] [2022-11-30T15:22:13.358Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:22:13.358Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:22:13.467Z] Serving at port 9006
+
+[debug] [2022-11-30T15:22:13.605Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:22:13.609Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:22:13.612Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:22:13.612Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: FINISHING"}}
+[debug] [2022-11-30T15:22:13.615Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: exited"}}
+[debug] [2022-11-30T15:22:13.615Z] [worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b3f054c7-1d42-4200-b45c-31e3293bfa64]: FINISHED"}}
+[debug] [2022-11-30T15:22:17.732Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:22:17.732Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:22:17.732Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:22:17.733Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:22:17.733Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:22:17.733Z] [worker-pool] Cleaned up workers for us-central1-app: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-app: 1 --> 0"}}
+[debug] [2022-11-30T15:22:17.741Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:22:17.741Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:22:18.334Z] [runtime-status] [19252] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.335Z] [runtime-status] [19252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.335Z] [runtime-status] [19252] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:22:18.336Z] [runtime-status] [19252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.393Z] [runtime-status] [19252] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:22:18.393Z] [runtime-status] [19252] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:22:18.393Z] [runtime-status] [19252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.393Z] [runtime-status] [19252] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.394Z] [runtime-status] [19252] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:22:18.394Z] [runtime-status] [19252] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:22:18.411Z] [runtime-status] [19252] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[debug] [2022-11-30T15:22:18.438Z] [runtime-status] [19252] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:22:18.438Z] [runtime-status] [19252] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_f036921601f946de.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19252] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_f036921601f946de.sock"}}
+[debug] [2022-11-30T15:22:18.454Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: IDLE"}}
+[debug] [2022-11-30T15:22:18.454Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:22:18.454Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:22:19.056Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: IDLE"}}
+[debug] [2022-11-30T15:22:19.057Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 595.033291ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 595.033291ms"}}
+[debug] [2022-11-30T15:25:05.576Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:25:06.581Z] Validating nodejs source
+[debug] [2022-11-30T15:25:07.946Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:25:07.946Z] Building nodejs source
+[debug] [2022-11-30T15:25:07.946Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:25:07.947Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:25:08.068Z] Serving at port 9006
+
+[debug] [2022-11-30T15:25:08.199Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:25:08.202Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:25:08.205Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:25:08.205Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: FINISHING"}}
+[debug] [2022-11-30T15:25:08.212Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: exited"}}
+[debug] [2022-11-30T15:25:08.212Z] [worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-e4bba31f-1f7e-4bef-a0c4-d5494ac4edb6]: FINISHED"}}
+[debug] [2022-11-30T15:26:08.136Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:26:09.138Z] Validating nodejs source
+[debug] [2022-11-30T15:26:09.761Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:26:09.761Z] Building nodejs source
+[debug] [2022-11-30T15:26:09.761Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:26:09.762Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:26:09.867Z] Serving at port 9006
+
+[debug] [2022-11-30T15:26:09.987Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:26:09.991Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:27:29.827Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:27:29.829Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:27:29.829Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:27:29.832Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:27:29.832Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:27:29.832Z] [worker-pool] Cleaned up workers for us-central1-app: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-app: 1 --> 0"}}
+[debug] [2022-11-30T15:27:29.837Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:27:29.837Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:27:30.461Z] [runtime-status] [19797] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.462Z] [runtime-status] [19797] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.462Z] [runtime-status] [19797] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:27:30.462Z] [runtime-status] [19797] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.571Z] [runtime-status] [19797] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:27:30.572Z] [runtime-status] [19797] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:27:30.572Z] [runtime-status] [19797] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.572Z] [runtime-status] [19797] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.573Z] [runtime-status] [19797] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:27:30.573Z] [runtime-status] [19797] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:27:30.594Z] [runtime-status] [19797] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[debug] [2022-11-30T15:27:30.640Z] [runtime-status] [19797] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:27:30.640Z] [runtime-status] [19797] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_94a3e8c1311e47c8.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [19797] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_94a3e8c1311e47c8.sock"}}
+[debug] [2022-11-30T15:27:30.650Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:27:30.650Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:27:30.650Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:27:30.653Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:27:30.653Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.361333ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.361333ms"}}
+[debug] [2022-11-30T15:28:20.539Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:20.539Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:20.539Z] Accepted request GET /hikend-bb683/us-central1/app/api/mountain/1669821738460 --> us-central1-app
+[debug] [2022-11-30T15:28:20.540Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:20.540Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460"}}
+[debug] [2022-11-30T15:28:20.540Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:20.541Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:20.547Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:20.547Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 3.501709ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 3.501709ms"}}
+[debug] [2022-11-30T15:28:44.767Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:44.768Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:44.768Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:28:44.769Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:44.770Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:28:44.770Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:44.770Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:44.792Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:44.792Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.366583ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.366583ms"}}
+[debug] [2022-11-30T15:28:48.156Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:48.156Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:48.158Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:28:48.158Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:48.159Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:28:48.159Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:48.159Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:48.163Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:48.163Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.247083ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.247083ms"}}
+[debug] [2022-11-30T15:28:53.744Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:53.744Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:53.744Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:28:53.745Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:53.745Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:28:53.745Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:53.745Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:53.748Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:53.748Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.675375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.675375ms"}}
+[debug] [2022-11-30T15:28:54.591Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:54.591Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:54.591Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:28:54.592Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:54.592Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:28:54.592Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:54.592Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:54.599Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:54.599Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.06325ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.06325ms"}}
+[debug] [2022-11-30T15:28:59.856Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:28:59.856Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:28:59.856Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:28:59.857Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:28:59.857Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:28:59.857Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:28:59.857Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:28:59.860Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:28:59.861Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.713542ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.713542ms"}}
+[debug] [2022-11-30T15:29:19.718Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:29:19.718Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:29:19.719Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:29:19.719Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:29:19.719Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:29:19.719Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:29:19.719Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:29:19.722Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:29:19.722Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.058541ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.058541ms"}}
+[debug] [2022-11-30T15:29:33.273Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:29:33.273Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:29:33.273Z] Accepted request GET /hikend-bb683/us-central1/app --> us-central1-app
+[debug] [2022-11-30T15:29:33.274Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:29:33.275Z] [functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app, mapping to path=/"}}
+[debug] [2022-11-30T15:29:33.275Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:29:33.275Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:29:33.278Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:29:33.278Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 2.223542ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 2.223542ms"}}
+[debug] [2022-11-30T15:29:42.396Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:29:42.397Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:29:42.397Z] Accepted request GET /hikend-bb683/us-central1/app/api/mountain/1669821738460 --> us-central1-app
+[debug] [2022-11-30T15:29:42.399Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:29:42.399Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460"}}
+[debug] [2022-11-30T15:29:42.399Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:29:42.399Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:29:42.403Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:29:42.403Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.576833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.576833ms"}}
+[debug] [2022-11-30T15:29:43.022Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:29:43.022Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:29:43.022Z] Accepted request GET /hikend-bb683/us-central1/app/api/mountain/1669821738460 --> us-central1-app
+[debug] [2022-11-30T15:29:43.023Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:29:43.023Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460"}}
+[debug] [2022-11-30T15:29:43.023Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:29:43.023Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:29:43.028Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:29:43.028Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.73375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.73375ms"}}
+[debug] [2022-11-30T15:29:43.481Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:29:43.481Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:29:43.481Z] Accepted request GET /hikend-bb683/us-central1/app/api/mountain/1669821738460 --> us-central1-app
+[debug] [2022-11-30T15:29:43.481Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:29:43.482Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669821738460, mapping to path=/api/mountain/1669821738460"}}
+[debug] [2022-11-30T15:29:43.482Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:29:43.482Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:29:43.484Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:29:43.485Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.298916ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.298916ms"}}
+[debug] [2022-11-30T15:30:47.283Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:30:47.284Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:30:47.285Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:30:47.287Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:30:47.288Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:30:47.288Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:30:47.289Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:30:47.300Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:30:47.300Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.595292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.595292ms"}}
+[debug] [2022-11-30T15:30:48.888Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:30:48.888Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:30:48.888Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:30:48.890Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:30:48.890Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:30:48.890Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:30:48.890Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:30:48.895Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:30:48.895Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.017ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.017ms"}}
+[debug] [2022-11-30T15:30:58.163Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:30:58.163Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:30:58.163Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:30:58.164Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:30:58.165Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:30:58.165Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:30:58.165Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:30:58.169Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: IDLE"}}
+[debug] [2022-11-30T15:30:58.169Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.994542ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.994542ms"}}
+[debug] [2022-11-30T15:31:13.150Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:31:14.154Z] Validating nodejs source
+[debug] [2022-11-30T15:31:14.796Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:31:14.796Z] Building nodejs source
+[debug] [2022-11-30T15:31:14.796Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:31:14.796Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:31:14.908Z] Serving at port 9006
+
+[debug] [2022-11-30T15:31:15.149Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:31:15.152Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:31:15.155Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:31:15.155Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: FINISHING"}}
+[debug] [2022-11-30T15:31:15.160Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: exited"}}
+[debug] [2022-11-30T15:31:15.160Z] [worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-f82a706b-0ffe-4616-be4b-4a9d215f4e78]: FINISHED"}}
+[debug] [2022-11-30T15:31:17.767Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:17.767Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:17.767Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:17.769Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:17.769Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:17.769Z] [worker-pool] Cleaned up workers for us-central1-app: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-app: 1 --> 0"}}
+[debug] [2022-11-30T15:31:17.778Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:31:17.778Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:31:18.366Z] [runtime-status] [20251] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.366Z] [runtime-status] [20251] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.367Z] [runtime-status] [20251] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:31:18.367Z] [runtime-status] [20251] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.424Z] [runtime-status] [20251] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:31:18.425Z] [runtime-status] [20251] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:31:18.425Z] [runtime-status] [20251] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.425Z] [runtime-status] [20251] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.426Z] [runtime-status] [20251] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:18.426Z] [runtime-status] [20251] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:31:18.438Z] [runtime-status] [20251] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[debug] [2022-11-30T15:31:18.465Z] [runtime-status] [20251] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:31:18.465Z] [runtime-status] [20251] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_6d701825a5da1c2e.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20251] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_6d701825a5da1c2e.sock"}}
+[debug] [2022-11-30T15:31:18.490Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:18.490Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:18.490Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:18.498Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:18.498Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.146708ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.146708ms"}}
+[debug] [2022-11-30T15:31:19.806Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:19.806Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:19.806Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:19.807Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:19.807Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:19.807Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:19.807Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:19.811Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:19.812Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.8895ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.8895ms"}}
+[debug] [2022-11-30T15:31:20.699Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:20.700Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:20.700Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:20.700Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:20.701Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:20.701Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:20.701Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:20.706Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:20.706Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.070083ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.070083ms"}}
+[debug] [2022-11-30T15:31:21.285Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:21.285Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:21.285Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:21.286Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:21.286Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:21.286Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:21.286Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[info] i  functions: Finished "app" in 0.382375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.382375ms"}}
+[debug] [2022-11-30T15:31:21.288Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:21.288Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-11-30T15:31:32.045Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:32.046Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:32.046Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:32.046Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:32.046Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:32.046Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:32.046Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:32.051Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: IDLE"}}
+[debug] [2022-11-30T15:31:32.051Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.143584ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.143584ms"}}
+[debug] [2022-11-30T15:31:42.859Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:31:43.863Z] Validating nodejs source
+[debug] [2022-11-30T15:31:44.518Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:31:44.518Z] Building nodejs source
+[debug] [2022-11-30T15:31:44.518Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:31:44.519Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:31:44.617Z] Serving at port 9006
+
+[debug] [2022-11-30T15:31:44.738Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:31:44.741Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:31:44.744Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:31:44.744Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: FINISHING"}}
+[debug] [2022-11-30T15:31:44.746Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: exited"}}
+[debug] [2022-11-30T15:31:44.747Z] [worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-9a8c78f1-8291-4390-a941-5fb6c009b75c]: FINISHED"}}
+[debug] [2022-11-30T15:31:45.113Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:45.113Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:45.113Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:45.115Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:45.116Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:45.116Z] [worker-pool] Cleaned up workers for us-central1-app: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-app: 1 --> 0"}}
+[debug] [2022-11-30T15:31:45.125Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:31:45.126Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:31:45.696Z] [runtime-status] [20313] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.696Z] [runtime-status] [20313] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.696Z] [runtime-status] [20313] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:31:45.697Z] [runtime-status] [20313] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.762Z] [runtime-status] [20313] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:31:45.763Z] [runtime-status] [20313] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:31:45.763Z] [runtime-status] [20313] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.763Z] [runtime-status] [20313] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.764Z] [runtime-status] [20313] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:31:45.764Z] [runtime-status] [20313] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:31:45.778Z] [runtime-status] [20313] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[debug] [2022-11-30T15:31:45.814Z] [runtime-status] [20313] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:31:45.814Z] [runtime-status] [20313] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_a6962a348c7162be.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [20313] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_a6962a348c7162be.sock"}}
+[debug] [2022-11-30T15:31:45.843Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE"}}
+[debug] [2022-11-30T15:31:45.844Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:45.844Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:46.338Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE"}}
+[debug] [2022-11-30T15:31:46.338Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 486.1965ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 486.1965ms"}}
+[debug] [2022-11-30T15:31:51.396Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:51.396Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:51.396Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:51.397Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:51.397Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:51.398Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:51.398Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:51.522Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE"}}
+[debug] [2022-11-30T15:31:51.523Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 121.140375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 121.140375ms"}}
+[debug] [2022-11-30T15:31:52.999Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:52.999Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:52.999Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:53.000Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:53.000Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:53.000Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:53.000Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:53.105Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE"}}
+[debug] [2022-11-30T15:31:53.105Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 102.604917ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 102.604917ms"}}
+[debug] [2022-11-30T15:31:54.016Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:31:54.016Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:31:54.016Z] Accepted request POST /hikend-bb683/us-central1/app/api/create-mountain --> us-central1-app
+[debug] [2022-11-30T15:31:54.017Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:31:54.017Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/create-mountain, mapping to path=/api/create-mountain"}}
+[debug] [2022-11-30T15:31:54.017Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:31:54.017Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:31:54.138Z] [worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-3ced97ce-16c0-47a1-9032-30aa311cecb6]: IDLE"}}
+[debug] [2022-11-30T15:31:54.139Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 117.427417ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 117.427417ms"}}

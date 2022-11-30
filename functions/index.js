@@ -20,29 +20,20 @@ app.get("/", (req, res) => {
   return res.status(200).send("Hai there");
 });
 
-// read all user details
-// get
-app.get("/api/userDetails", (req, res) => {
+// POST - mountain
+app.post("/api/create-mountain", (req, res) => {
   (async () => {
     try {
-      let query = db.collection("userdetails");
-      let response = [];
-
-      await query.get().then((data) => {
-        let docs = data.docs; // query results
-
-        docs.map((doc) => {
-          const selectedData = {
-            name: doc.data().name,
-            mobile: doc.data().mobile,
-          };
-
-          response.push(selectedData);
-        });
-        return response;
+      await db.collection("mountains").doc(`/${Date.now()}/`).create({
+        id: Date.now(),
+        name: req.body.name,
+        photo_url: req.body.photo_url,
+        info: req.body.info,
+        hikingClubs: req.body.hikingClubs,
+        routes: req.body.routes,
       });
 
-      return res.status(200).send({ status: "Success", data: response });
+      return res.status(200).send({ status: "Success", msg: "Data Saved" });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -67,18 +58,29 @@ app.get("/api/userDetail/:id", (req, res) => {
   })();
 });
 
-// create
-// Post
-app.post("/api/create", (req, res) => {
+// read all user details
+// get
+app.get("/api/userDetails", (req, res) => {
   (async () => {
     try {
-      await db.collection("userdetails").doc(`/${Date.now()}/`).create({
-        id: Date.now(),
-        name: req.body.name,
-        mobile: req.body.mobile,
+      let query = db.collection("userdetails");
+      let response = [];
+
+      await query.get().then((data) => {
+        let docs = data.docs; // query results
+
+        docs.map((doc) => {
+          const selectedData = {
+            name: doc.data().name,
+            mobile: doc.data().mobile,
+          };
+
+          response.push(selectedData);
+        });
+        return response;
       });
 
-      return res.status(200).send({ status: "Success", msg: "Data Saved" });
+      return res.status(200).send({ status: "Success", data: response });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -121,3 +123,10 @@ app.delete("/api/delete/:id", (req, res) => {
 
 // Exports api to the firebase cloud functions
 exports.app = functions.https.onRequest(app);
+
+
+
+
+
+
+
