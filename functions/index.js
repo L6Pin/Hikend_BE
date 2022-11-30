@@ -57,8 +57,7 @@ app.get("/api/mountain/:id", (req, res) => {
   })();
 });
 
-// update
-// put
+// PUT - mountain/update/:id
 app.put("/api/mountain/update/:id", (req, res) => {
   (async () => {
     try {
@@ -79,6 +78,19 @@ app.put("/api/mountain/update/:id", (req, res) => {
   })();
 });
 
+// DELETE - mountain/:id
+app.delete("/api/mountain/:id", (req, res) => {
+  (async () => {
+    try {
+      const reqDoc = db.collection("mountains").doc(req.params.id);
+      await reqDoc.delete();
+      return res.status(200).send({ status: "Success", msg: "Data Removed" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
 
 // read all user details
 // get
@@ -110,27 +122,5 @@ app.get("/api/userDetails", (req, res) => {
   })();
 });
 
-// delete
-// delete
-app.delete("/api/delete/:id", (req, res) => {
-  (async () => {
-    try {
-      const reqDoc = db.collection("userdetails").doc(req.params.id);
-      await reqDoc.delete();
-      return res.status(200).send({ status: "Success", msg: "Data Removed" });
-    } catch (error) {
-      console.log(error);
-      res.status(500).send({ status: "Failed", msg: error });
-    }
-  })();
-});
-
 // Exports api to the firebase cloud functions
 exports.app = functions.https.onRequest(app);
-
-
-
-
-
-
-

@@ -1070,3 +1070,273 @@
 [debug] [2022-11-30T15:39:04.687Z] [worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: IDLE"}}
 [debug] [2022-11-30T15:39:04.687Z] [work-queue] {"queueLength":0,"workRunningCount":0}
 [info] i  functions: Finished "app" in 515.445041ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 515.445041ms"}}
+[debug] [2022-11-30T15:41:43.014Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:41:44.018Z] Validating nodejs source
+[debug] [2022-11-30T15:41:44.656Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:41:44.656Z] Building nodejs source
+[debug] [2022-11-30T15:41:44.656Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:41:44.657Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:41:44.783Z] Serving at port 9006
+
+[debug] [2022-11-30T15:41:44.918Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:41:44.921Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:41:44.924Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:41:44.924Z] [worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: FINISHING"}}
+[debug] [2022-11-30T15:41:44.929Z] [worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: exited"}}
+[debug] [2022-11-30T15:41:44.929Z] [worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-6ad4dc01-37a9-4cdb-acb5-e9c4b249a169]: FINISHED"}}
+[debug] [2022-11-30T15:42:09.975Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:42:10.977Z] Validating nodejs source
+[debug] [2022-11-30T15:42:11.547Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:42:11.547Z] Building nodejs source
+[debug] [2022-11-30T15:42:11.548Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:42:11.548Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:42:11.649Z] Serving at port 9006
+
+[debug] [2022-11-30T15:42:11.769Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:42:11.772Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:42:27.314Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:42:28.316Z] Validating nodejs source
+[debug] [2022-11-30T15:42:28.864Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:42:28.864Z] Building nodejs source
+[debug] [2022-11-30T15:42:28.864Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:42:28.865Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:42:28.970Z] Serving at port 9006
+
+[debug] [2022-11-30T15:42:29.089Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:42:29.093Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:42:29.649Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:42:30.651Z] Validating nodejs source
+[debug] [2022-11-30T15:42:31.223Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:42:31.224Z] Building nodejs source
+[debug] [2022-11-30T15:42:31.224Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:42:31.224Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:42:31.311Z] Serving at port 9006
+
+[debug] [2022-11-30T15:42:31.396Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:42:31.400Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:43:36.492Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-30T15:43:36.492Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-30T15:43:36.493Z] Accepted request DELETE /hikend-bb683/us-central1/app/api/mountain/1669822305851 --> us-central1-app
+[debug] [2022-11-30T15:43:36.493Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-30T15:43:36.494Z] [functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669822305851, mapping to path=/api/mountain/1669822305851 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/hikend-bb683/us-central1/app/api/mountain/1669822305851, mapping to path=/api/mountain/1669822305851"}}
+[debug] [2022-11-30T15:43:36.494Z] [worker-pool] Cleaned up workers for us-central1-app: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-app: 1 --> 0"}}
+[debug] [2022-11-30T15:43:36.503Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-11-30T15:43:36.504Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-11-30T15:43:37.099Z] [runtime-status] [21882] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.099Z] [runtime-status] [21882] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.100Z] [runtime-status] [21882] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-30T15:43:37.100Z] [runtime-status] [21882] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.189Z] [runtime-status] [21882] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-30T15:43:37.190Z] [runtime-status] [21882] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-11-30T15:43:37.190Z] [runtime-status] [21882] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.190Z] [runtime-status] [21882] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.191Z] [runtime-status] [21882] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.1.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.1.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-11-30T15:43:37.191Z] [runtime-status] [21882] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/luka.peric/Desktop/Hikend_BE/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-11-30T15:43:37.209Z] [runtime-status] [21882] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"hikend-bb683","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\nEdMgf2dAfjiqCw2TZaX4zbc8\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"hikend-bb683\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCTNZaoaULhr0P8\\n/MQJr5lDIXVykCNv7Um3GdKs/z05zrlirmlWCjjHIhukbknaqKuIFkMloiYfQPz5\\nZCerAYmXfbr/19KpEpFNOceK4fAFOjJ3/Cm9DWKKHWxr5yM6QTOpfbA9feoUeGrf\\nrJZWjA0S8H1im8Q93t9ZVtzQYkdRb4A2Hw195v2agSIDfSRhHRhwp/j0n4vSo/Jc\\nTxyIKo7xRyCg+KzYGjH0QndbeJbEHbmB6G55mx5zGwz6QUoql2+olmJWCbZ6iCZg\\nvIF46gxCMK9o44EnetJLM6vgLvClay0EkBJH+tSSlhzda55jasUl0SGxp1I42Ups\\nt5NBrIppAgMBAAECggEAFuGE9c9KpH6UAD4fkGvZVBxev3xU7cBBrXKXkuknUJVn\\nrkVyvPtgwN710fSMiS6fXssrC63s4/27dF4TZlqaUtApoTugFER9DjZVZCpjHsTh\\ndFHfAPIUJ2iUYh8ulA7vY0BUhPJN0Hm5DuQqB/DD1XZI3utcMMu0BpRgRQmJkUgZ\\nkQDVZ95MdulgwWf/HRbkyR9tbyuMNnO22aYmjKdDQ4zxtaJkQwA8YS5nVPDtfSKd\\n7s+An5Mpcku3Abqmo9I5Fs0S7kwQFm1NHXvb2SFJI/MixqqyrDBnLF21nrPTnFAU\\n+LNN9JlFXSVuDvs9Lye5h0HVF2ZH/dFkhE9TTClXywKBgQDI3AqAZKxtXEO15vt3\\n1xdTCeGVIYIuywEAy4SwwSHUF3k7JVjJWMzcXRd9szt9LUQWFz3YJ30nwq9ryHUG\\n2Qc+s7tdrs+yt59XmqSv3l+Bc3zzVDM393r7wRDI47noL9B97qU4SBmXc+BFNNK8\\n0XGRMHgJrED1tUtP05MD4z/wAwKBgQC7nyGL3K6snG+eLab+U6nRnWexmoT7khYw\\nK8zxFC3p6fIng3AXbw4E3u+NS39l6VQTirKkuBSDg3GkGT2bwaCN0Oavkw8UrMvx\\nf4MvFG/r3wSWx0J9w9hMIn9ro8uXBpgtHKu3wrReJQLKEJVCEIMH7cZBZNoLIuCd\\nYZGjxpo+IwKBgQCWVTK69B6l32eCTvYptN/tM7kWIDVKhoAiszCGBpcmIceHwCUa\\n1g7GZBp/51UAFJAgJJcSIEQpLSqUdj04udkVUfpLXNpxPcPSEpluU/aRcfm0OXH4\\nUo9GvDKu2Nq88ISQrLwWSsh0tbLGuYl87xmb/HXrb3RTMrTCc21WfJDPNwKBgQCU\\nQ2sSCCEsnC6ENBVL0zdWQunnanD+D/JivKomNEkYGNxYJ0DT89mDNdzdrjSNhzX+\\nf1MuYZ0sVBngkGWkCP3kM5moUzDOqMI9JAO5l4/eOA17TRkZI0Nw3q4MlJJU1Uw6\\nEfcMrtszrlGm9jXM0BmLkXVixdycgkI3fBvH7TCEOwKBgHcbUUfiBSbk+QHHoUVo\\nhmX6CZcOmoI95KxqTzHR+0JEJLWN1JBjyDauGqqfoV+/GryztJV+7zVuUFV3Hhsb\\n5hJJmh+VeSUwRpFQGlTPv2qSofScMtoZfDFzST3nKFWRRGaIkdN7C8zoCaSuwj9/\\nEdMgf2dAfjiqCw2TZaX4zbc8\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-gu4y4@hikend-bb683.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}}}"}}
+[debug] [2022-11-30T15:43:37.252Z] [runtime-status] [21882] Functions runtime initialized. {"cwd":"/Users/luka.peric/Desktop/Hikend_BE/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Functions runtime initialized. {\"cwd\":\"/Users/luka.peric/Desktop/Hikend_BE/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-11-30T15:43:37.252Z] [runtime-status] [21882] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_d649a681534e2221.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [21882] Listening to port: /var/folders/75/14trcvhj1xnbt7q1n213p_1c0000gp/T/fire_emu_d649a681534e2221.sock"}}
+[debug] [2022-11-30T15:43:37.317Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: IDLE"}}
+[debug] [2022-11-30T15:43:37.317Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-11-30T15:43:37.317Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-11-30T15:43:37.788Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: IDLE"}}
+[debug] [2022-11-30T15:43:37.788Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 467.919208ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 467.919208ms"}}
+[debug] [2022-11-30T15:43:55.617Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:43:56.618Z] Validating nodejs source
+[debug] [2022-11-30T15:43:57.197Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:43:57.197Z] Building nodejs source
+[debug] [2022-11-30T15:43:57.197Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:43:57.197Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:43:57.303Z] Serving at port 9006
+
+[debug] [2022-11-30T15:43:57.451Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:43:57.454Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[debug] [2022-11-30T15:43:57.457Z] [worker-pool] Shutting down IDLE worker (us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-app)"}}
+[debug] [2022-11-30T15:43:57.457Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: FINISHING"}}
+[debug] [2022-11-30T15:43:57.459Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: exited"}}
+[debug] [2022-11-30T15:43:57.460Z] [worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-7a4fbac8-7106-4f93-bd1b-4318a7e7fc00]: FINISHED"}}
+[debug] [2022-11-30T15:44:03.496Z] File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/luka.peric/Desktop/Hikend_BE/functions/index.js changed, reloading triggers"}}
+[debug] [2022-11-30T15:44:04.497Z] Validating nodejs source
+[debug] [2022-11-30T15:44:05.013Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-30T15:44:05.013Z] Building nodejs source
+[debug] [2022-11-30T15:44:05.014Z] Analyzing nodejs backend spec
+[debug] [2022-11-30T15:44:05.014Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-30T15:44:05.097Z] Serving at port 9006
+
+[debug] [2022-11-30T15:44:05.180Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-30T15:44:05.184Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
