@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 // POST - mountain
-app.post("/api/create-mountain", (req, res) => {
+app.post("/api/mountain", (req, res) => {
   (async () => {
     try {
       await db.collection("mountains").doc(`/${Date.now()}/`).create({
@@ -33,7 +33,7 @@ app.post("/api/create-mountain", (req, res) => {
         routes: req.body.routes,
       });
 
-      return res.status(200).send({ status: "Success", msg: "Data Saved" });
+      return res.status(200).send({ msg: "Data Saved" });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -43,14 +43,14 @@ app.post("/api/create-mountain", (req, res) => {
 
 // read specific user detail
 // get
-app.get("/api/userDetail/:id", (req, res) => {
+app.get("/api/mountain/:id", (req, res) => {
   (async () => {
     try {
-      const reqDoc = db.collection("userdetails").doc(req.params.id);
-      let userDetail = await reqDoc.get();
-      let response = userDetail.data();
+      const reqDoc = db.collection("mountains").doc(req.params.id);
+      let mountainDetail = await reqDoc.get();
+      let response = mountainDetail.data();
 
-      return res.status(200).send({ status: "Success", data: response });
+      return res.status(200).send({ data: response });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
