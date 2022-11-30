@@ -41,8 +41,7 @@ app.post("/api/mountain", (req, res) => {
   })();
 });
 
-// read specific user detail
-// get
+// GET - mountain/:id
 app.get("/api/mountain/:id", (req, res) => {
   (async () => {
     try {
@@ -57,6 +56,29 @@ app.get("/api/mountain/:id", (req, res) => {
     }
   })();
 });
+
+// update
+// put
+app.put("/api/mountain/update/:id", (req, res) => {
+  (async () => {
+    try {
+      const reqDoc = db.collection("mountains").doc(req.params.id);
+      await reqDoc.update({
+        id: Date.now(),
+        name: req.body.name,
+        photo_url: req.body.photo_url,
+        info: req.body.info,
+        hikingClubs: req.body.hikingClubs,
+        routes: req.body.routes,
+      });
+      return res.status(200).send({ status: "Success", msg: "Data Updated" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
+
 
 // read all user details
 // get
@@ -81,24 +103,6 @@ app.get("/api/userDetails", (req, res) => {
       });
 
       return res.status(200).send({ status: "Success", data: response });
-    } catch (error) {
-      console.log(error);
-      res.status(500).send({ status: "Failed", msg: error });
-    }
-  })();
-});
-
-// update
-// put
-app.put("/api/update/:id", (req, res) => {
-  (async () => {
-    try {
-      const reqDoc = db.collection("userdetails").doc(req.params.id);
-      await reqDoc.update({
-        name: req.body.name,
-        mobile: req.body.mobile,
-      });
-      return res.status(200).send({ status: "Success", msg: "Data Updated" });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
