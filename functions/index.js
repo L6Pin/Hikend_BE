@@ -20,6 +20,11 @@ app.get("/", (req, res) => {
   return res.status(200).send("Hai there");
 });
 
+
+
+// Mountains API //
+/////////////////////////////////////////////////////////////////////////////////
+
 // POST - mountain
 app.post("/api/mountain", (req, res) => {
   (async () => {
@@ -92,12 +97,86 @@ app.delete("/api/mountain/:id", (req, res) => {
   })();
 });
 
-// read all user details
-// get
-app.get("/api/userDetails", (req, res) => {
+
+
+// Cities API //
+/////////////////////////////////////////////////////////////////////////////////
+
+// POST - /city
+app.post("/api/city", (req, res) => {
   (async () => {
     try {
-      let query = db.collection("userdetails");
+      await db.collection("cities").doc(`/${Date.now()}/`).create({
+        id: Date.now(),
+        name: req.body.name,
+        photo_url: req.body.photo_url,
+        mountains: req.body.mountains,
+      });
+
+      return res.status(200).send({ msg: "Data Saved" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
+
+// GET - city/:id
+app.get("/api/city/:id", (req, res) => {
+  (async () => {
+    try {
+      const reqDoc = db.collection("cities").doc(req.params.id);
+      let cityDetail = await reqDoc.get();
+      let response = cityDetail.data();
+
+      return res.status(200).send({ data: response });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
+
+// PUT - city/update/:id
+app.put("/api/city/update/:id", (req, res) => {
+  (async () => {
+    try {
+      const reqDoc = db.collection("cities").doc(req.params.id);
+      await reqDoc.update({
+        id: Date.now(),
+        name: req.body.name,
+        photo_url: req.body.photo_url,
+        mountains: req.body.mountains,
+      });
+      return res.status(200).send({ status: "Success", msg: "Data Updated" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
+
+// DELETE - mountain/:id
+app.delete("/api/city/:id", (req, res) => {
+  (async () => {
+    try {
+      const reqDoc = db.collection("cities").doc(req.params.id);
+      await reqDoc.delete();
+      return res.status(200).send({ status: "Success", msg: "Data Removed" });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: error });
+    }
+  })();
+});
+
+
+// read all user details
+// get
+app.get("/api/cities", (req, res) => {
+  (async () => {
+    try {
+      let query = db.collection("cities");
       let response = [];
 
       await query.get().then((data) => {
@@ -105,8 +184,10 @@ app.get("/api/userDetails", (req, res) => {
 
         docs.map((doc) => {
           const selectedData = {
+            id: Date.now(),
             name: doc.data().name,
-            mobile: doc.data().mobile,
+            photo_url: doc.data().photo_url,
+            mountains: doc.data().mountains,
           };
 
           response.push(selectedData);
