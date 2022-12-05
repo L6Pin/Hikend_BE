@@ -1,0 +1,228 @@
+{
+  "name": "Zeljin",
+  "photo_url": "https://www.pk-radnicki.rs/wp-content/uploads/2018/01/zeljin-izdaleka.jpg",
+  "info": {
+    "height": 1758,
+    "peak": "Zeljin",
+    "coordinates": {
+      "x": "43.4773° N",
+      "y": "20.8044° E"
+    },
+    "description": "Željin is a mountain in central Serbia between the lower Ibar, Kopaonik, and Goč. It belongs to the group of Kopaonički mountains. It is the confluence of the headwaters of the Rasina, a tributary of the Zapadna Morava, and Jošanica and Gokčanica, a tributary of the Ibar. The highest peak is located at 1,785 m. In the past, lead ore was mined on Željina. It is rich in radioactive mineral springs and has a rich forest cover. There is a well-known thermal mineral spring in Jošanička banja with a water temperature of 48° to 80'C."
+  },
+  "hikingClubs": [
+    {
+      "name": "PK Uspon",
+      "logo": "https://i.ibb.co/NpSFmRj/logo.png",
+      "contact": "https://www.instagram.com/pk_uspon/"
+    },
+    {
+      "name": "PD Radocelo",
+      "logo": "https://pss.rs/wp-content/uploads/2022/04/RadoceloUsce-300x259.jpg",
+      "contact": "https://www.instagram.com/pd_radocelo_usce/"
+    },
+    {
+      "name": "PED Maglic",
+      "logo": "https://i.ibb.co/GkmGNRZ/download.jpg",
+      "contact": "https://www.instagram.com/ped_maglic_kraljevo/"
+    }
+  ],
+  "routes": [
+    {
+      "number": 1,
+      "name": "routeName",
+      "difficulty": "Hard (8/10)",
+      "length": "20 km",
+      "timeRequired": "1h 30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    },
+    {
+      "number": 2,
+      "name": "routeName",
+      "difficulty": "Easy (2/10)",
+      "length": "10 km",
+      "timeRequired": "30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    }
+  ]
+}
+///
+{
+  "name": "Stolovi",
+  "photo_url": "http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg",
+  "info": {
+    "height": 1375,
+    "peak": "Kamariste",
+    "coordinates": {
+      "x": "43°36′32″N",
+      "y": "20°36′40″E"
+    },
+    "description": "Stolovi is a mountain in Serbia, southwest of Kraljevo, between the Ibar, Ribnica and Brezanska rivers. The tributaries of the mentioned rivers diverge from it in all directions, which split the mountain into long ridges and slopes with deep valleys and gave it a star shape as a whole. Tables descend in a star-like manner from the peaks to the neighboring smaller mountains, Ozren (959 m), Vitoš (755 m), Oštra glava (729 m), Strmenica (678 m) and others. The main mountain ridge is in the north-northwest-south-southeast direction. The highest peak of the Stolovi mountain is Kamarište, 1375 m above sea level, some call it Ravni sto, because of the plateau on top. Usovica is often mentioned as the highest peak, but Usovica is only a ridge that leads to Čiker peak (1325 m), which is the second highest peak of Stolov. Other higher peaks of Stolov towards the Ibra valley are Mala Čuka (1151 m), Velika Čuka (1030 m), Orlovac (938 m), and Čukar (1020 m), Tepak (1020 m), Klečak (871 m) are higher peaks towards Ribnica valley."
+  },
+  "hikingClubs": [
+    {
+      "name": "PK Uspon",
+      "logo": "https://i.ibb.co/NpSFmRj/logo.png",
+      "contact": "https://www.instagram.com/pk_uspon/"
+    },
+    {
+      "name": "PD Radocelo",
+      "logo": "https://pss.rs/wp-content/uploads/2022/04/RadoceloUsce-300x259.jpg",
+      "contact": "https://www.instagram.com/pd_radocelo_usce/"
+    },
+    {
+      "name": "PED Maglic",
+      "logo": "https://i.ibb.co/GkmGNRZ/download.jpg",
+      "contact": "https://www.instagram.com/ped_maglic_kraljevo/"
+    }
+  ],
+  "routes": [
+    {
+      "number": 1,
+      "name": "routeName",
+      "difficulty": "Hard (8/10)",
+      "length": "20 km",
+      "timeRequired": "1h 30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    },
+    {
+      "number": 2,
+      "name": "routeName",
+      "difficulty": "Easy (2/10)",
+      "length": "10 km",
+      "timeRequired": "30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    }
+  ]
+}
+
+///
+
+
+{
+  "name": "Radocelo",
+  "photo_url": "http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg",
+  "info": {
+    "height": 1643,
+    "peak": "Krivača",
+    "coordinates": {
+      "x": "43.4763° N",
+      "y": "20.4692° E"
+    },
+    "description": "Radočelo is a mountain in Serbia, on the left side of the river Ibra, about 12 km west of the town of Ušća. The mountain chain runs north-east-south-west, is curved towards the south-east. On the western and northern sides of the mountain, the valley of the river Studenica, a left tributary of the Ibar, is covered. The valleys of the right tributaries of Studenica and the source branches of Brvenica, the left tributaries of the Ibar are divided into long and high slopes and higher elevations: Kriváča (1,643 m in the northwest and Vrhove (1,533 m in the southwest). In the southwestern part it consists of Upper Carboniferous shales and in the northern part of Permian sandstone, and the central parts of peridotite and serpentine."
+  },
+  "hikingClubs": [
+    {
+      "name": "PK Uspon",
+      "logo": "https://i.ibb.co/NpSFmRj/logo.png",
+      "contact": "https://www.instagram.com/pk_uspon/"
+    },
+    {
+      "name": "PD Radocelo",
+      "logo": "https://pss.rs/wp-content/uploads/2022/04/RadoceloUsce-300x259.jpg",
+      "contact": "https://www.instagram.com/pd_radocelo_usce/"
+    },
+    {
+      "name": "PED Maglic",
+      "logo": "https://i.ibb.co/GkmGNRZ/download.jpg",
+      "contact": "https://www.instagram.com/ped_maglic_kraljevo/"
+    }
+  ],
+  "routes": [
+    {
+      "number": 1,
+      "name": "routeName",
+      "difficulty": "Hard (8/10)",
+      "length": "20 km",
+      "timeRequired": "1h 30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    },
+    {
+      "number": 2,
+      "name": "routeName",
+      "difficulty": "Easy (2/10)",
+      "length": "10 km",
+      "timeRequired": "30 min",
+      "gpx": "https://pss.rs/wp-content/uploads/2017/08/7-3-6-Donja-Studena-Trem.gpx"
+    }
+  ]
+}
+
+
+///
+
+
+{
+  "name": "Kraljevo",
+  "photo_url": "https://www.kraljevo.rs/wp-content/uploads/2021/06/Trg-Kraljevo-1.png",
+  "mountains": [
+    {
+      "id":1669899197838,
+      "name":"Zeljin",
+      "photo_url":"https://www.pk-radnicki.rs/wp-content/uploads/2018/01/zeljin-izdaleka.jpg"
+    },
+    {
+      "id":1669899533662,
+      "name":"Stolovi",
+      "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+    },
+    {
+      "id":1669900414555,
+      "name":"Radocelo",
+      "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+    }
+  ]
+}
+
+///
+
+
+{
+  "name": "Beograd",
+  "photo_url": "https://deih43ym53wif.cloudfront.net/sava-river-belgrade-serbia-shutterstock_695817301_6e9c75d6d4.jpeg",
+  "mountains": [
+    {
+      "id":1669899197838,
+      "name":"Zeljin",
+      "photo_url":"https://www.pk-radnicki.rs/wp-content/uploads/2018/01/zeljin-izdaleka.jpg"
+    },
+    {
+      "id":1669899533662,
+      "name":"Stolovi",
+      "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+    },
+    {
+      "id":1669900414555,
+      "name":"Radocelo",
+      "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+    }
+  ]
+}
+
+
+
+
+///
+
+
+  {
+    "name": "Krusevac",
+    "photo_url": "https://izleti-srbija.rs/wp-content/uploads/2020/12/Panorama-Krusevca-odozgo.jpg",
+    "mountains": [
+      {
+        "id":1669899197838,
+        "name":"Zeljin",
+        "photo_url":"https://www.pk-radnicki.rs/wp-content/uploads/2018/01/zeljin-izdaleka.jpg"
+      },
+      {
+        "id":1669899533662,
+        "name":"Stolovi",
+        "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+      },
+      {
+        "id":1669900414555,
+        "name":"Radocelo",
+        "photo_url":"http://planine.net/wp-content/uploads/2020/10/stolovi-usovica-16-1.jpg"
+      }
+    ]
+  }

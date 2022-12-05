@@ -32,6 +32,7 @@ app.post("/api/mountain", (req, res) => {
       await db.collection("mountains").doc(`/${Date.now()}/`).create({
         id: Date.now(),
         name: req.body.name,
+        yt: req.body.yt,
         photo_url: req.body.photo_url,
         info: req.body.info,
         hikingClubs: req.body.hikingClubs,
@@ -70,6 +71,7 @@ app.put("/api/mountain/update/:id", (req, res) => {
       await reqDoc.update({
         id: Date.now(),
         name: req.body.name,
+        yt: req.body.yt,
         photo_url: req.body.photo_url,
         info: req.body.info,
         hikingClubs: req.body.hikingClubs,
@@ -195,7 +197,7 @@ app.get("/api/cities", (req, res) => {
         return response;
       });
 
-      return res.status(200).send({ status: "Success", data: response });
+      return res.status(200).send({ data: response });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -205,3 +207,6 @@ app.get("/api/cities", (req, res) => {
 
 // Exports api to the firebase cloud functions
 exports.app = functions.https.onRequest(app);
+
+
+
