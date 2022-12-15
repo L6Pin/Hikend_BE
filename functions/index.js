@@ -186,7 +186,7 @@ app.get("/api/cities", (req, res) => {
 
         docs.map((doc) => {
           const selectedData = {
-            id: Date.now(),
+            id: doc.data().id,
             name: doc.data().name,
             photo_url: doc.data().photo_url,
             mountains: doc.data().mountains,
@@ -204,6 +204,8 @@ app.get("/api/cities", (req, res) => {
     }
   })();
 });
+
+
 
 // Exports api to the firebase cloud functions
 exports.app = functions.https.onRequest(app);
