@@ -8,6 +8,7 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+
 const express = require("express");
 const cors = require("cors");
 const { response } = require("express");
@@ -37,6 +38,7 @@ app.post("/api/mountain", (req, res) => {
         info: req.body.info,
         hikingClubs: req.body.hikingClubs,
         routes: req.body.routes,
+        saved: false
       });
 
       return res.status(200).send({ msg: "Data Saved" });
@@ -63,6 +65,47 @@ app.get("/api/mountain/:id", (req, res) => {
   })();
 });
 
+
+// GET saved mountains
+app.get("/api/saved", (req, res) => {
+  (async () => {
+    try {
+      const query = db.collection("mountains")
+
+      let response = []
+      await query.get().then((data) => {
+        let docs = data.docs
+
+        docs.map((doc) => {
+
+          if (doc.data().saved === true) {
+            const selectedItem = {
+              id: doc.data().id,
+              name: doc.data().name,
+              yt: doc.data().yt,
+              photo_url: doc.data().photo_url,
+              info: doc.data().info,
+              hikingClubs: doc.data().hikingClubs,
+              routes: doc.data().routes,
+              saved: doc.data().saved
+            }
+
+            response.push(selectedItem)
+          }
+        })
+      })
+
+      // const snapshot = await firebase.firestore().collection('cities').get()
+      // let response = snapshot.docs.map(doc => doc.data())
+
+      return res.status(200).send({ data: response });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ status: "Failed", msg: "GET saved mountains" });
+    }
+  })();
+});
+
 // PUT - mountain/update/:id
 app.put("/api/mountain/update/:id", (req, res) => {
   (async () => {
@@ -76,6 +119,7 @@ app.put("/api/mountain/update/:id", (req, res) => {
         info: req.body.info,
         hikingClubs: req.body.hikingClubs,
         routes: req.body.routes,
+        saved: req.body.saved
       });
       return res.status(200).send({ status: "Success", msg: "Data Updated" });
     } catch (error) {
