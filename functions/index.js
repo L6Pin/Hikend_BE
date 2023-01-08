@@ -38,7 +38,7 @@ app.post("/api/mountain", (req, res) => {
         info: req.body.info,
         hikingClubs: req.body.hikingClubs,
         routes: req.body.routes,
-        saved: false
+        saved: req.body.saved
       });
 
       return res.status(200).send({ msg: "Data Saved" });
@@ -95,8 +95,6 @@ app.get("/api/saved", (req, res) => {
         })
       })
 
-      // const snapshot = await firebase.firestore().collection('cities').get()
-      // let response = snapshot.docs.map(doc => doc.data())
 
       return res.status(200).send({ data: response });
     } catch (error) {
@@ -107,12 +105,12 @@ app.get("/api/saved", (req, res) => {
 });
 
 // PUT - mountain/update/:id
+
 app.put("/api/mountain/update/:id", (req, res) => {
   (async () => {
     try {
       const reqDoc = db.collection("mountains").doc(req.params.id);
       await reqDoc.update({
-        id: Date.now(),
         name: req.body.name,
         yt: req.body.yt,
         photo_url: req.body.photo_url,
@@ -120,14 +118,36 @@ app.put("/api/mountain/update/:id", (req, res) => {
         hikingClubs: req.body.hikingClubs,
         routes: req.body.routes,
         saved: req.body.saved
-      });
-      return res.status(200).send({ status: "Success", msg: "Data Updated" });
+      })
+
+      return res.status(200).send({ msg: "Data Updated" });
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
     }
   })();
 });
+
+// app.put("/api/mountain/update/:id", (req, res) => {
+//   (async () => {
+//     try {
+//       const reqDoc = db.collection("mountains").doc(req.params.id);
+//       await reqDoc.update({
+//         name: req.body.name,
+//         yt: req.body.yt,
+//         photo_url: req.body.photo_url,
+//         info: req.body.info,
+//         hikingClubs: req.body.hikingClubs,
+//         routes: req.body.routes,
+//         saved: req.body.saved
+//       });
+//       return res.status(200).send({ status: "Success", msg: "Data Updated" });
+//     } catch (error) {
+//       console.log(error);
+//       res.status(500).send({ status: "Failed", msg: error });
+//     }
+//   })();
+// });
 
 // DELETE - mountain/:id
 app.delete("/api/mountain/:id", (req, res) => {
