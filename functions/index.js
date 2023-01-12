@@ -57,7 +57,7 @@ app.get("/api/mountain/:id", (req, res) => {
       let mountainDetail = await reqDoc.get();
       let response = mountainDetail.data();
 
-      return res.status(200).send({ data: response });
+      return res.status(200).send(response);
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -96,7 +96,7 @@ app.get("/api/saved", (req, res) => {
       })
 
 
-      return res.status(200).send({ data: response });
+      return res.status(200).send(response);
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: "GET saved mountains" });
@@ -195,7 +195,7 @@ app.get("/api/city/:id", (req, res) => {
       let cityDetail = await reqDoc.get();
       let response = cityDetail.data();
 
-      return res.status(200).send({ data: response });
+      return res.status(200).send(response);
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
@@ -261,7 +261,7 @@ app.get("/api/cities", (req, res) => {
         return response;
       });
 
-      return res.status(200).send({ data: response });
+      return res.status(200).send(response);
     } catch (error) {
       console.log(error);
       res.status(500).send({ status: "Failed", msg: error });
